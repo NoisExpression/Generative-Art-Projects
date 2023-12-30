@@ -1,1 +1,1 @@
-![Oily Blobs](Metaballs/01_OilSpheres/image/0000.jpg)
+![Oily Blobs](./image/0000.png)
