@@ -1,1 +1,1 @@
-![Oily Blobs](./image/0000.png)
+![Oily Blobs](./image/0000.jpg)
