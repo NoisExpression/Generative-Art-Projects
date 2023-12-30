@@ -1,1 +1,1 @@
-# Generative-Art-Projects
+# Nois Generative Art Projects
