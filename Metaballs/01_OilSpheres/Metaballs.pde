@@ -10,13 +10,13 @@ class Metaballs {
         //__INIT__
         numShapes = nShapes;
         colorM = co;
-        metaballs = new ArrayList<Blob>(); // creo l'array di blobs
+        metaballs = new ArrayList<Blob>();
         circles = new PShape[numShapes];
         contours = new PShape[numShapes];
 
         for (int i = 0; i < numShapes; ++i) {
             int step = (int)(maxRadius/numShapes);
-            circles[i] = createShape(GROUP); // nel for sotto raggruppo 
+            circles[i] = createShape(GROUP); 
             //! pshape are rendered in order of definition
             PShape ps = createShape(
                             ELLIPSE, 
@@ -28,39 +28,19 @@ class Metaballs {
             ps.setStroke(false);
             circles[i].addChild(ps);
         }
-
-    /*
-        for (int i = 0; i < numShapes; ++i) {
-            int step = (int)(maxRadius/numShapes);
-            contours[i] = createShape(GROUP); // nel for sotto raggruppo 
-            //! pshape are rendered in order of definition
-            PShape contour = createShape(
-                            ELLIPSE, 
-                            0, 0, 
-                            (float)((i+1)*step), 
-                            (float)((i+1)*step)
-                            );
-            contour.setFill(false);
-            contour.setStroke(color(255));
-            contour.strokeWeight(10);
-            contours[i].addChild(contour);
-        }
-    */
-
     }
 
     Metaballs (int nShapes, int maxRadius, color co, float contour) {
         //__INIT__
         numShapes = nShapes;
         colorM = co;
-        metaballs = new ArrayList<Blob>(); // creo l'array di blobs
+        metaballs = new ArrayList<Blob>(); // array of blobs
         circles = new PShape[numShapes];
         contours = new PShape[numShapes];
-        // qui creo le shapes con contorno aggiuntivo in modo che sia uniforme per ogni forma
+        // shapes 
         for (int i = 0; i < numShapes; ++i) {
             int step = (int)(maxRadius/numShapes);
-            circles[i] = createShape(GROUP); // nel for sotto raggruppo 
-            //! pshape are rendered in order of definition
+            circles[i] = createShape(GROUP); 
             PShape ps = createShape(
                             ELLIPSE, 
                             0, 0, 
@@ -77,7 +57,7 @@ class Metaballs {
     Metaballs (int nS) {
         //__INIT__
         numShapes = nS;
-        metaballs = new ArrayList<Blob>(); // creo l'array di blobs
+        metaballs = new ArrayList<Blob>(); // blobs
     }
 
     void add(float x, float y){
@@ -85,15 +65,12 @@ class Metaballs {
         metaballs.add(new Blob(x, y, index));
     }
 
-    // Funzione per ottenere un indice distribuito in modo normale
     int getNormalDistributionIndex(int arrayLength) {
         float mean = (float)arrayLength / 2.0;
-        float stdDev = arrayLength / 4.0; // Modifica il valore a tuo piacimento
+        float stdDev = arrayLength / 4.0;   // modify 4.0 as you like 
 
-        // Genera un numero casuale distribuito in modo normale
         float value = randomGaussian() * stdDev + mean;
 
-        // Assicurati che l'indice sia all'interno dei limiti dell'array
         int index = (int)(constrain(value, 0, arrayLength-1));
         return index;
     }

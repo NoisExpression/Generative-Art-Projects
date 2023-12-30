@@ -1,11 +1,7 @@
-CanvasTo canvasTo;
-color[][] canva;
 color[] toLerpColor = {#000000, #0C2A30, #0F8997, #74BBB9, #D3E5E2}; // #A6CAC4,
 color[] lerpedColor;
 int xpix = 20; int ypix = 20;
 int nX, nY;
-boolean gate = false; 
-boolean inited = false;
 ArrayList<Metaballs> metaballs;
 ArrayList<Blob> blobs;
 Metaballs metaScheletro;
@@ -24,7 +20,6 @@ void setup() {
     //* _INIT_
     nX = width/xpix; //? calcolo il numero di passi da xpix dentro width
     nY = height/ypix; //? calcolo il numero di passi da ypix dentro height
-    canvasTo = new CanvasTo(nX, nY); // inizializzo il convertitore
     metaballs = new ArrayList<Metaballs>();
     int nStepsPerColorToLerp = (s/(toLerpColor.length)) ;
     float indexStep = ((float)toLerpColor.length/((float)(s)));
@@ -57,14 +52,7 @@ void draw() {
         meta.setBlobList(blobs);
         meta.show();
     }
-    if (gate ) {
-        inited = true;
-        canva = canvasTo.colorTable(); //converto il canvas in tabella colori
-    }
-    if (inited) {
-        showBlocks();
-    }
-    //println(metaScheletro.metaballs.size());
+    
     if(save && count < 750){
         count++;
         saveFrame("img0/"+nf(count, 4)+".jpg");
@@ -81,17 +69,5 @@ void mouseWheel(){
 }
 
 void keyPressed() {
-    //gate = !gate;
-    //if(!gate) inited = false;
     if(key == 's' || key == 'S' ) save = !save;
-}
-
-void showBlocks(){
-    for (int i = 0; i < nX; ++i) {
-        for (int j = 0; j < nY; ++j) {
-            fill(canva[j][i]);
-            noStroke(); // disegnare i contorni di rect rallenta mbotto il rendering
-            rect(i*xpix, j*ypix, xpix, ypix);
-        }
-    }
 }

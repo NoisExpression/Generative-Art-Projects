@@ -11,9 +11,7 @@ class Blob {
         radius = r;
     }
 
-    Blob (float x, float y, int index) {// questo costruttore lo si usa per le pshape 
-    // in cui in base all'indice passato posso calcolare il raggio 
-    // ma dato che non mi serve calcolarlo in questa classe non lo faccio
+    Blob (float x, float y, int index) {
         pos = new PVector(x, y);
         vel = PVector.random2D();
         vel.mult(random(2,5));
