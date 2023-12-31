@@ -17,7 +17,7 @@ class Metaballs {
         for (int i = 0; i < numShapes; ++i) {
             int step = (int)(maxRadius/numShapes);
             circles[i] = createShape(GROUP); 
-            //! pshape are rendered in order of definition
+            
             PShape ps = createShape(
                             ELLIPSE, 
                             0, 0, 
