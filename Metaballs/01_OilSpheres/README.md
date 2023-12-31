@@ -2,17 +2,8 @@
 
 ![Oily Blobs](./image/0000.jpg)
 
----
-
-
-
----
-
----
-
-
-
 This project, created in Processing, drew inspiration from the mesmerizing metaballs algorithm, which I stumbled upon through The Coding Train youtube channel. The discovery was truly intriguing. This marks my first experience using the PShape object to render shapes on the canvas.
+
 Opting for these shapes instead of the typical ellipse(...) served two primary purposes.
 First, it posed a challenge, compelling me to grasp the intricacies of this new object.
 Second, these shapes proved swifter in rendering compared to their "normal" counterparts. The framerate remains less affected by the abundance of blobs, allowing me to incorporate more without causing significant lag.
