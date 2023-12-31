@@ -2,5 +2,11 @@
 ** Oily Blobs **
 ![Oily Blobs](./image/0000.jpg)
 
-This project, made in Processing, was born after I stumbled upon the metaballs algorithm. I discovered it thanks to the Coding Train channel, and I found it really interesting. This is also my first time using the PShape object to render shapes on canvas. I tried to use this kind of shapes instead of the normal ellipse(...) for two main reasons, the first one was to force myself to learn to handle this new kind of object, and the other one was that they are faster to render compared to their counterpart, in fact the framerate is less affectend by the large quantities of blobs, so I can make more blobs and still make it laggish (eheheh). Even tho the outcame is beautful, I still find it quite simple, but I wont desist and will strive for someting more dinamic and complex in the next future. It's been four months since I started this journey and I am exited by the new things that I might create in the next future. I hope they will satisfy me hunger of beauty.  
+This project, created in Processing, drew inspiration from the mesmerizing metaballs algorithm, which I stumbled upon through The Coding Train youtube channel. The discovery was truly intriguing. This marks my first experience using the PShape object to render shapes on the canvas.
+Opting for these shapes instead of the typical ellipse(...) served two primary purposes. 
+First, it posed a challenge, compelling me to grasp the intricacies of this new object. 
+Second, these shapes proved swifter in rendering compared to their "normal" counterparts. The framerate remains less affected by the abundance of blobs, allowing me to incorporate more without causing significant lag. 
+Although the outcome is beautiful, I still find it rather simple. However, I won't give up and will strive for something more dynamic and complex in the near future. 
+
+It has been four months since I embarked on this journey, and I am excited about the new creations that may emerge. I hope they will satisfy my hunger for beauty.
 
